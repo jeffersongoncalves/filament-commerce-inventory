@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Inventory\Resources\InventoryItem;
 
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\Inventory\Models\InventoryItem;
 use JeffersonGoncalves\FilamentCommerce\Inventory\CommerceInventoryPlugin;
@@ -26,9 +26,9 @@ class InventoryItemResource extends Resource
         }
     }
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return InventoryItemForm::configure($form);
+        return InventoryItemForm::configure($schema);
     }
 
     public static function table(Table $table): Table
